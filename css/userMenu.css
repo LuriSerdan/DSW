@@ -1,0 +1,277 @@
+/* Menu de navegação fixo no topo da página */
+#menu {
+    vertical-align: middle;
+    position: fixed; /* Fixa o menu no topo */
+    top: 0; /* Alinha o menu ao topo da página */
+    left: 0; /* Alinha o menu à esquerda da página */
+    width: 100%; /* Largura total da página */
+    text-align: right; /* Alinha o texto à direita */
+    background-color: white; /* Adicione o fundo branco a faixa */
+}
+
+/* Estilo para o logotipo fixo no topo */
+#logo {
+    position: fixed; /* Fixa o logotipo na posição */
+    top: 20px; /* Distância do topo */
+    left: 10px; /* Distância da esquerda */
+    z-index: 9899; /* Garante que o logotipo esteja sobre outros elementos */
+    cursor: pointer;
+}
+
+/* Estilo para itens da lista no menu */
+#menu ul li {
+    vertical-align: middle;
+    margin: 0; /* Remove margem */
+    display: inline-block; /* Exibe itens em linha */
+    padding: 0px 20px 0px 0px; /* Espaçamento interno */
+    font-size: 30px; /* Tamanho da fonte */
+}
+
+#btn1 {
+    border: 1px solid black;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#btn2 {
+    border: 0;
+    background-color: transparent;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#btn3 {
+    background-color: white;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#btn4 {
+    background-color: black;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    vertical-align: middle;cursor: pointer;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 80vh;
+    background-image: url('../img/fundo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    margin-top: 150px;
+}
+
+.content h1 {
+    color: black;
+}
+
+.userMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 5px;
+    width: 350px;
+    height: 300px;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.userMenu span {
+    text-align: center;
+    font-size: 30px;
+    width: 80%;
+    height: 40px;
+    border-bottom: 1px solid black;
+}
+
+.userMenu .mainButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 25px;
+}
+
+.userMenu .mainButtons button {
+    width: 80%;
+    height: 45px;
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    border: 0px;
+    cursor: pointer;
+    font-family: "Inter", serif;
+}
+
+.userMenu .leftButton {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.userMenu .leftButton button {
+    border: 1px solid black;
+    font-size: 23px;
+    font-weight: 500;
+    width: 50%;
+    height: 35px;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    font-family: "Inter", serif;
+}
+
+/*responsividade*/
+@media (min-width: 805px) and (max-width: 1024px){
+    body {
+        background-image: url('../img/fundo.png'); /* Substitua pelo caminho da sua imagem */
+        background-attachment: fixed; /* Mantém a imagem fixa no fundo */
+    }
+
+    .content h1 {
+        font-size: 55px;
+    }
+    
+    .content p {
+        font-size: 30px;
+    }
+
+    .content img {
+        width: 70%;
+    }
+
+    .content div {
+        width: 67%;
+        background-color: white;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+    
+    #menu ul li {
+        padding: 0px 12px 0px 0px; /* Espaçamento interno */
+    }
+}
+
+@media (max-width: 806px) {
+
+    .userMenu .mainButtons button {
+        font-size: 18px;
+        font-weight: 20px;
+    }
+
+    #btn1, #btn3 {
+        width: 89px;
+    }
+    
+    /* #btn2 {
+        display: none;
+    } */
+
+    .content img {
+        width: 80%;
+    }
+
+    .content {
+        width: 80%;
+        margin-top: 0;
+    }
+    
+    .content h1 {
+        text-align: center;
+        color: black;
+        font-family: Alatsi;
+        font-size: 35px;
+        font-weight: 400;
+    }
+    
+    .content div p {
+        font-size: 16px;
+    }
+
+    .content div {
+        width: 80%;
+        background-color: white;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .content #btn4 {
+        width: 230px;
+        height: 66px;
+        font-size: 30px;
+    }
+
+    #logo {
+        left: 10px; /* Distância da esquerda */
+        width: 120px;
+    }
+
+    #menu ul li {
+        padding: 0px 5px 0px 0px; /* Espaçamento interno */
+    }
+
+    body {
+        display: flex;
+        flex-direction: column; /* Torna o conteúdo vertical */
+        min-height: 100vh; /* Garante que o body tenha altura total */
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .content {
+        flex: 1; /* Faz o conteúdo principal ocupar o espaço disponível */
+        margin-top: 20%;
+    }
+    
+    footer {
+        width: 60%;
+        margin-bottom: 10%;
+        display: block; /* Mostra o footer */
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid rgb(39, 38, 38);
+
+        font-size: 20px;
+    }
+     footer a {
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+     }
+}
